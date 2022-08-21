@@ -1265,3 +1265,9 @@ user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+
+// Set an empty geolocation network url
+user_pref("geo.provider.network.url", "");
+
+// Explicitly disable DNS over HTTPS
+user_pref("network.trr.mode", 5);
