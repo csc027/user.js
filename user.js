@@ -1281,3 +1281,8 @@ user_pref("widget.non-native-theme.enabled", true); // [DEFAULT: true]
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+
+user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting.letterboxing", true);
+user_pref("webgl.disabled", true);
+user_pref("privacy.spoof_english", 2);
