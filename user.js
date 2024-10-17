@@ -1247,3 +1247,8 @@ user_pref("_user.js.parrot", "9999 syntax error: the parrot's shuffled off 'is m
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+
+user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting.letterboxing", true);
+user_pref("webgl.disabled", true);
+user_pref("privacy.spoof_english", 2);
