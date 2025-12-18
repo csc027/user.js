@@ -204,9 +204,6 @@ user_pref("network.prefetch-next", false);
  * [1] https://developer.mozilla.org/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control ***/
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
-/* 0603: disable predictor / prefetching ***/
-user_pref("network.predictor.enabled", false); // [DEFAULT: false FF144+]
-user_pref("network.predictor.enable-prefetch", false); // [FF48+] [DEFAULT: false]
 /* 0604: disable link-mouseover opening connection to linked server
  * [1] https://news.slashdot.org/story/15/08/14/2321202/how-to-quash-firefoxs-silent-requests ***/
 user_pref("network.http.speculative-parallel-limit", 0);
@@ -393,7 +390,7 @@ user_pref("_user.js.parrot", "1200 syntax error: the parrot's a stiff!");
  * but the problem is that the browser can't know that. Setting this pref to true is the only way for the
  * browser to ensure there will be no unsafe renegotiations on the channel between the browser and the server
  * [SETUP-WEB] SSL_ERROR_UNSAFE_NEGOTIATION: is it worth overriding this for that one site?
- * [STATS] SSL Labs (May 2024) reports over 99.7% of top sites have secure renegotiation [4]
+ * [STATS] SSL Labs (Nov 2025) reports almost 99.85% of top sites have secure renegotiation [4]
  * [1] https://wiki.mozilla.org/Security:Renegotiation
  * [2] https://datatracker.ietf.org/doc/html/rfc5746
  * [3] https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3555
@@ -1256,6 +1253,15 @@ user_pref("browser.urlbar.showSearchTerms.enabled", false);
 
 /*** [SECTION 9999]: DEPRECATED / RENAMED ***/
 user_pref("_user.js.parrot", "9999 syntax error: the parrot's shuffled off 'is mortal coil!");
+/* ESR140.x still uses all the following prefs
+// [NOTE] replace the * with a slash in the line above to re-enable active ones
+// FF148
+// 0603: disable predictor / prefetching
+  // [-] https://bugzilla.mozilla.org/2006028
+user_pref("network.predictor.enabled", false); // [DEFAULT: false FF144+]
+user_pref("network.predictor.enable-prefetch", false); // [FF48+] [DEFAULT: false]
+// ***/
+
 /* ESR128.x still uses all the following prefs
 // [NOTE] replace the * with a slash in the line above to re-enable active ones
 // FF132
