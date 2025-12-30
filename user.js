@@ -1,7 +1,7 @@
 /******
 *    name: arkenfox user.js
-*    date: 15 November 2025
-* version: 144
+*    date: 30 January 2026
+* version: 147
 *    urls: https://github.com/arkenfox/user.js [repo]
 *        : https://arkenfox.github.io/gui/ [interactive]
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
@@ -1218,7 +1218,7 @@ user_pref("datareporting.policy.dataSubmissionEnabled", false);
 /* 8501: disable Health Reports
  * [SETTING] Privacy & Security>Firefox Data Collection and Use>Send technical... data ***/
 user_pref("datareporting.healthreport.uploadEnabled", false);
-/* 0802: disable telemetry
+/* 8502: disable telemetry
  * The "unified" pref affects the behavior of the "enabled" pref
  * - If "unified" is false then "enabled" controls the telemetry module
  * - If "unified" is true then "enabled" only controls whether to record extended data
