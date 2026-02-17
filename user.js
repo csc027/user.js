@@ -417,7 +417,7 @@ user_pref("security.cert_pinning.enforcement_level", 2);
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1429800,1670985,1753071
  * [2] https://blog.mozilla.org/security/tag/crlite/
  * [3] https://hacks.mozilla.org/2025/08/crlite-fast-private-and-comprehensive-certificate-revocation-checking-in-firefox/ ***/
-user_pref("security.remote_settings.crlite_filters.enabled", true); // [DEFAULT: true FF137+]
+user_pref("security.remote_settings.crlite_filters.enabled", true); // [DEFAULT: true]
 user_pref("security.pki.crlite_mode", 2); // [DEFAULT: 2 FF142+]
 
 /** MIXED CONTENT ***/
@@ -1030,21 +1030,7 @@ user_pref("extensions.webcompat-reporter.enabled", false); // [DEFAULT: false]
 /* 6012: enforce Quarantined Domains [FF115+]
  * [WHY] https://support.mozilla.org/kb/quarantined-domains ***/
 user_pref("extensions.quarantinedDomains.enabled", true); // [DEFAULT: true]
-/* 6050: prefsCleaner: reset previously active items removed from arkenfox FF128+ ***/
-   // user_pref("privacy.clearOnShutdown.cache", "");
-   // user_pref("privacy.clearOnShutdown.cookies", "");
-   // user_pref("privacy.clearOnShutdown.downloads", "");
-   // user_pref("privacy.clearOnShutdown.formdata", "");
-   // user_pref("privacy.clearOnShutdown.history", "");
-   // user_pref("privacy.clearOnShutdown.offlineApps", "");
-   // user_pref("privacy.clearOnShutdown.sessions", "");
-   // user_pref("privacy.cpd.cache", "");
-   // user_pref("privacy.cpd.cookies", "");
-   // user_pref("privacy.cpd.formdata", "");
-   // user_pref("privacy.cpd.history", "");
-   // user_pref("privacy.cpd.offlineApps", "");
-   // user_pref("privacy.cpd.sessions", "");
-/* 6051: prefsCleaner: reset previously active items removed from arkenfox FF140+ ***/
+/* 6050: prefsCleaner: reset previously active items removed from arkenfox FF140+ ***/
    // user_pref("browser.display.use_system_colors", "");
    // user_pref("browser.urlbar.fakespot.featureGate", "");
    // user_pref("security.OCSP.enabled", "");
@@ -1262,22 +1248,6 @@ user_pref("_user.js.parrot", "9999 syntax error: the parrot's shuffled off 'is m
   // [-] https://bugzilla.mozilla.org/2006028
 user_pref("network.predictor.enabled", false); // [DEFAULT: false FF144+]
 user_pref("network.predictor.enable-prefetch", false); // [FF48+] [DEFAULT: false]
-// ***/
-
-/* ESR128.x still uses all the following prefs
-// [NOTE] replace the * with a slash in the line above to re-enable active ones
-// FF132
-// 2617: remove webchannel whitelist
-   // [-] https://bugzilla.mozilla.org/1275612
-   // user_pref("webchannel.allowObject.urlWhitelist", "");
-// FF140
-// 0323: disable shopping experience [FF116+]
-   // [-] https://bugzilla.mozilla.org/1964845
-   // [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1840156#c0
-user_pref("browser.shopping.experience2023.enabled", false); // [DEFAULT: false]
-// 0806: disable urlbar suggestions
-   // [-] https://bugzilla.mozilla.org/1959497
-user_pref("browser.urlbar.pocket.featureGate", false); // [FF116+] [DEFAULT: false]
 // ***/
 
 /* END: internal custom pref to test for syntax errors ***/
