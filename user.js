@@ -1,7 +1,7 @@
 /******
 *    name: arkenfox user.js
-*    date: 30 January 2026
-* version: 147
+*    date: 17 February 2026
+* version: 144
 *    urls: https://github.com/arkenfox/user.js [repo]
 *        : https://arkenfox.github.io/gui/ [interactive]
 * license: MIT: https://github.com/arkenfox/user.js/blob/master/LICENSE.txt
@@ -1119,7 +1119,9 @@ user_pref("_user.js.parrot", "7000 syntax error: the parrot's pushing up daisies
    // user_pref("extensions.systemAddon.update.enabled", false); // [FF62+]
    // user_pref("extensions.systemAddon.update.url", ""); // [FF44+]
 /* 7015: enable the DNT (Do Not Track) HTTP header
- * [WHY] DNT is enforced with Tracking Protection which is used in ETP Strict (2701) ***/
+ * [WHY] Fingerprintable. In FF141+ DNT is never enabled. DNT is slated for deprecation [1]
+   [NOTE] In FF140, DNT is enforced with Tracking Protection which is used in ETP Strict (2701)
+   [1] https://bugzilla.mozilla.org/1967420 ***/
    // user_pref("privacy.donottrackheader.enabled", true);
 /* 7016: customize ETP settings
  * [NOTE] FPP (fingerprintingProtection) is ignored when RFP (4501) is enabled
